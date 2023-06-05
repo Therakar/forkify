@@ -587,9 +587,22 @@ const timeout = function(s) {
 };
 // https://forkify-api.herokuapp.com/v2
 ///////////////////////////////////////
+const renderSpinner = function(parentEL) {
+    const markup = `
+    <div class="spinner">
+      <svg>
+        <use href="${(0, _iconsSvgDefault.default)}#icon-loader"></use>
+      </svg>
+    </div> 
+
+  `;
+    parentEL.innerHTML = "";
+    parentEL.insertAdjacentHTML("afterbegin", markup);
+};
 const showRecipe = async function() {
     try {
         // 1. Loading Recipe
+        renderSpinner(recipeContainer);
         const res = await fetch("https://forkify-api.herokuapp.com/api/v2/recipes/5ed6604591c37cdc054bcd09");
         const data = await res.json();
         console.log(res, data);
