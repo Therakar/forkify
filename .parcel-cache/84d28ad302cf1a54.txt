@@ -1,14 +1,14 @@
-6119
+6123
 95C:\Users\matte\Desktop\forkify\node_modules\@swc\helpers\src\_class_apply_descriptor_update.mjs133304493465829581 0
 69C:\Users\matte\Desktop\forkify\node_modules\lines-and-columns\LICENSE133304493445221840 0
 95C:\Users\matte\Desktop\forkify\node_modules\dom-serializer\node_modules\entities\lib\index.d.ts133304493450248405 0
-51C:\Users\matte\Desktop\forkify\src\js\controller.js133299456297579300 0
+51C:\Users\matte\Desktop\forkify\src\js\controller.js133304670220296386 0
 62C:\Users\matte\Desktop\forkify\node_modules\msgpackr\pack.d.ts133304493459204555 0
 64C:\Users\matte\Desktop\forkify\node_modules\picocolors\README.md133304493447017044 0
 54C:\Users\matte\Desktop\forkify\node_modules\parse-json133304493446498436 1
 34C:\Users\matte\Desktop\forkify\src133299438225069414 1
 73C:\Users\matte\Desktop\forkify\node_modules\css-select\lib\index.d.ts.map133304493453215552 0
-35C:\Users\matte\Desktop\forkify\dist133304494206565765 1
+35C:\Users\matte\Desktop\forkify\dist133304669153483007 1
 58C:\Users\matte\Desktop\forkify\node_modules\.bin\json5.ps1133304493469868772 0
 81C:\Users\matte\Desktop\forkify\node_modules\csso\node_modules\css-tree\lib\syntax133304493462348888 1
 87C:\Users\matte\Desktop\forkify\node_modules\@parcel\core\src\requests\PackageRequest.js133304493460713254 0
@@ -58,7 +58,7 @@
 116C:\Users\matte\Desktop\forkify\node_modules\@parcel\optimizer-htmlnano\node_modules\svgo\plugins\_applyTransforms.js133304493446468512 0
 76C:\Users\matte\Desktop\forkify\node_modules\nth-check\lib\esm\index.d.ts.map133304493449350809 0
 59C:\Users\matte\Desktop\forkify\node_modules\is-glob\LICENSE133304493445261737 0
-43C:\Users\matte\Desktop\forkify\package.json133304494194825674 0
+43C:\Users\matte\Desktop\forkify\package.json133304497464147492 0
 75C:\Users\matte\Desktop\forkify\node_modules\css-tree\lib\parser\sequence.js133304493462947278 0
 83C:\Users\matte\Desktop\forkify\node_modules\@swc\helpers\cjs\_apply_decs_2203_r.cjs133304493446398697 0
 87C:\Users\matte\Desktop\forkify\node_modules\@parcel\markdown-ansi\test\markdown-ansi.js133304493446947230 0
@@ -94,7 +94,7 @@
 105C:\Users\matte\Desktop\forkify\node_modules\@parcel\optimizer-svgo\node_modules\csso\lib\replace\property133304493451854111 1
 52C:\Users\matte\Desktop\forkify\node_modules\svgo\bin133304493445710536 1
 58C:\Users\matte\Desktop\forkify\node_modules\@parcel\fs\src133304493448971815 1
-48C:\Users\matte\Desktop\forkify\package-lock.json133304494194815698 0
+48C:\Users\matte\Desktop\forkify\package-lock.json133304496505718097 0
 82C:\Users\matte\Desktop\forkify\node_modules\chrome-trace-event\dist\trace-event.js133304493445401360 0
 75C:\Users\matte\Desktop\forkify\node_modules\caniuse-lite\data\regions\VG.js133304493469080878 0
 70C:\Users\matte\Desktop\forkify\node_modules\css-what\lib\es\index.d.ts133304493450587497 0
@@ -107,13 +107,13 @@
 95C:\Users\matte\Desktop\forkify\node_modules\@parcel\runtime-js\lib\helpers\browser\js-loader.js133304493450836833 0
 88C:\Users\matte\Desktop\forkify\node_modules\caniuse-lite\data\features\rel-noreferrer.js133304493467943922 0
 48C:\Users\matte\Desktop\forkify\node_modules\.bin133304494194217283 1
-41C:\Users\matte\Desktop\forkify\index.html133304482120139535 0
+41C:\Users\matte\Desktop\forkify\index.html133304666281898361 0
 65C:\Users\matte\Desktop\forkify\node_modules\anymatch\package.json133304494191582792 0
 72C:\Users\matte\Desktop\forkify\node_modules\source-map\lib\quick-sort.js133304493448632722 0
 79C:\Users\matte\Desktop\forkify\node_modules\caniuse-lite\data\features\touch.js133304493468821568 0
-62C:\Users\matte\Desktop\forkify\node_modules\.package-lock.json133304494195025417 0
+62C:\Users\matte\Desktop\forkify\node_modules\.package-lock.json133304496505917559 0
 74C:\Users\matte\Desktop\forkify\node_modules\@swc\helpers\lib\_construct.js133304493461820294 0
-43C:\Users\matte\Desktop\forkify\node_modules133304494194267161 1
+43C:\Users\matte\Desktop\forkify\node_modules133304496505259305 1
 75C:\Users\matte\Desktop\forkify\node_modules\caniuse-lite\data\regions\BO.js133304493459972497 0
 76C:\Users\matte\Desktop\forkify\node_modules\react-error-overlay\package.json133304493448124090 0
 96C:\Users\matte\Desktop\forkify\node_modules\caniuse-lite\data\features\link-rel-modulepreload.js133304493466487819 0
@@ -239,7 +239,7 @@
 94C:\Users\matte\Desktop\forkify\node_modules\csso\node_modules\css-tree\lib\syntax\node\Hash.js133304493462109535 0
 65C:\Users\matte\Desktop\forkify\node_modules\entities\lib\index.js133304493448513058 0
 92C:\Users\matte\Desktop\forkify\node_modules\caniuse-lite\data\features\insertadjacenthtml.js133304493465979174 0
-49C:\Users\matte\Desktop\forkify\node_modules\@lmdb133304494194297079 1
+49C:\Users\matte\Desktop\forkify\node_modules\@lmdb133304496505279256 1
 86C:\Users\matte\Desktop\forkify\node_modules\css-select\lib\pseudo-selectors\index.d.ts133304493460234532 0
 70C:\Users\matte\Desktop\forkify\node_modules\@parcel\workers\index.d.ts133304493452916357 0
 87C:\Users\matte\Desktop\forkify\node_modules\caniuse-lite\data\features\sharedworkers.js133304493468263076 0
@@ -274,9 +274,9 @@
 90C:\Users\matte\Desktop\forkify\node_modules\caniuse-lite\data\features\webkit-user-drag.js133304493469280353 0
 111C:\Users\matte\Desktop\forkify\node_modules\css-select\node_modules\entities\lib\generated\encode-html.d.ts.map133304493452407705 0
 78C:\Users\matte\Desktop\forkify\node_modules\electron-to-chromium\versions.json133304493449290971 0
-61C:\Users\matte\Desktop\forkify\node_modules\@msgpackr-extract133304494194287100 1
+61C:\Users\matte\Desktop\forkify\node_modules\@msgpackr-extract133304496505279256 1
 93C:\Users\matte\Desktop\forkify\node_modules\lmdb\dependencies\lmdb\libraries\liblmdb\mtest3.c133304493459733160 0
-48C:\Users\matte\Desktop\forkify\node_modules\@swc133304494194287100 1
+48C:\Users\matte\Desktop\forkify\node_modules\@swc133304496505269297 1
 74C:\Users\matte\Desktop\forkify\node_modules\css-select\lib\esm\sort.js.map133304493459384072 0
 65C:\Users\matte\Desktop\forkify\node_modules\posthtml\lib\index.js133304493446298966 0
 68C:\Users\matte\Desktop\forkify\node_modules\domhandler\lib\node.d.ts133304493448463177 0
@@ -507,7 +507,7 @@
 97C:\Users\matte\Desktop\forkify\node_modules\@parcel\transformer-postcss\lib\PostCSSTransformer.js133304493448243764 0
 75C:\Users\matte\Desktop\forkify\node_modules\caniuse-lite\data\regions\JO.js133304493466118803 0
 65C:\Users\matte\Desktop\forkify\node_modules\sass\types\index.d.ts133304494192570148 0
-59C:\Users\matte\Desktop\forkify\dist\forkify.3464ddca.js.map133304494206555798 0
+59C:\Users\matte\Desktop\forkify\dist\forkify.3464ddca.js.map133304497472690855 0
 107C:\Users\matte\Desktop\forkify\node_modules\csso\node_modules\css-tree\lib\definition-syntax\SyntaxError.js133304493462947278 0
 90C:\Users\matte\Desktop\forkify\node_modules\csso\node_modules\css-tree\cjs\lexer\Lexer.cjs133304493459812936 0
 97C:\Users\matte\Desktop\forkify\node_modules\css-select\node_modules\domutils\lib\esm\traversal.js133304493449839501 0
@@ -773,7 +773,7 @@
 52C:\Users\matte\Desktop\forkify\node_modules\.bin\ncp133304492154428254 0
 102C:\Users\matte\Desktop\forkify\node_modules\csso\node_modules\css-tree\cjs\definition-syntax\parse.cjs133304493460443973 0
 75C:\Users\matte\Desktop\forkify\node_modules\csso\cjs\clean\TypeSelector.cjs133304493452248142 0
-55C:\Users\matte\Desktop\forkify\dist\forkify.3464ddca.js133304494206525870 0
+55C:\Users\matte\Desktop\forkify\dist\forkify.3464ddca.js133304497472591111 0
 60C:\Users\matte\Desktop\forkify\node_modules\stable\README.md133304493446139386 0
 68C:\Users\matte\Desktop\forkify\node_modules\weak-lru-cache\README.md133304493448173958 0
 82C:\Users\matte\Desktop\forkify\node_modules\@parcel\core\test\fixtures\main-global133304493462548345 1
@@ -2693,7 +2693,7 @@
 65C:\Users\matte\Desktop\forkify\node_modules\chalk\source\index.js133304493445900034 0
 89C:\Users\matte\Desktop\forkify\node_modules\@parcel\watcher\src\windows\WindowsBackend.hh133304493451923934 0
 60C:\Users\matte\Desktop\forkify\node_modules\dotenv\README.md133304493447156676 0
-56C:\Users\matte\Desktop\forkify\dist\favicon.8b2f57bf.png133304494206396226 0
+56C:\Users\matte\Desktop\forkify\dist\favicon.8b2f57bf.png133304653961556020 0
 69C:\Users\matte\Desktop\forkify\node_modules\dotenv\lib\cli-options.js133304493447565575 0
 75C:\Users\matte\Desktop\forkify\node_modules\caniuse-lite\data\regions\KM.js133304493466308294 0
 60C:\Users\matte\Desktop\forkify\node_modules\domutils\LICENSE133304493445211871 0
@@ -4058,7 +4058,7 @@
 81C:\Users\matte\Desktop\forkify\node_modules\caniuse-lite\data\features\css-has.js133304493462009785 0
 75C:\Users\matte\Desktop\forkify\node_modules\caniuse-lite\data\regions\SL.js133304493468302969 0
 75C:\Users\matte\Desktop\forkify\node_modules\caniuse-lite\data\regions\SO.js133304493468332886 0
-53C:\Users\matte\Desktop\forkify\dist\logo.726d37a8.png133304494206306471 0
+53C:\Users\matte\Desktop\forkify\dist\logo.726d37a8.png133304653961595930 0
 75C:\Users\matte\Desktop\forkify\node_modules\caniuse-lite\data\regions\ST.js133304493468412668 0
 75C:\Users\matte\Desktop\forkify\node_modules\@parcel\core\test\utils.test.js133304493462019757 0
 75C:\Users\matte\Desktop\forkify\node_modules\caniuse-lite\data\regions\SV.js133304493468492452 0
@@ -4809,6 +4809,7 @@
 81C:\Users\matte\Desktop\forkify\node_modules\@swc\helpers\esm\_set_prototype_of.js133304493462687976 0
 124C:\Users\matte\Desktop\forkify\node_modules\@parcel\optimizer-htmlnano\node_modules\csso\lib\replace\property\font-weight.js133304493451794271 0
 80C:\Users\matte\Desktop\forkify\node_modules\@swc\helpers\esm\_sliced_to_array.js133304493462767766 0
+61C:\Users\matte\Desktop\forkify\dist\logo.726d37a8.png.2688.3w133304650884618646 0
 80C:\Users\matte\Desktop\forkify\node_modules\@swc\helpers\esm\_super_prop_base.js133304493462807654 0
 88C:\Users\matte\Desktop\forkify\node_modules\@swc\helpers\esm\_tagged_template_literal.js133304493462847551 0
 94C:\Users\matte\Desktop\forkify\node_modules\@swc\helpers\esm\_tagged_template_literal_loose.js133304493462827600 0
@@ -5410,7 +5411,7 @@
 105C:\Users\matte\Desktop\forkify\node_modules\@parcel\optimizer-svgo\node_modules\csso\lib\replace\color.js133304493449839501 0
 109C:\Users\matte\Desktop\forkify\node_modules\@parcel\optimizer-svgo\node_modules\csso\lib\replace\Dimension.js133304493451704509 0
 106C:\Users\matte\Desktop\forkify\node_modules\@parcel\optimizer-svgo\node_modules\csso\lib\replace\Number.js133304493452507443 0
-53C:\Users\matte\Desktop\forkify\dist\index.62406edb.js133304494206356330 0
+53C:\Users\matte\Desktop\forkify\dist\index.62406edb.js133304497472720760 0
 110C:\Users\matte\Desktop\forkify\node_modules\@parcel\optimizer-svgo\node_modules\csso\lib\replace\Percentage.js133304493452577253 0
 106C:\Users\matte\Desktop\forkify\node_modules\@parcel\optimizer-svgo\node_modules\csso\lib\replace\String.js133304493452956248 0
 103C:\Users\matte\Desktop\forkify\node_modules\@parcel\optimizer-svgo\node_modules\csso\lib\replace\Url.js133304493453095877 0
@@ -5586,7 +5587,7 @@
 113C:\Users\matte\Desktop\forkify\node_modules\@parcel\optimizer-htmlnano\node_modules\svgo\plugins\removeViewBox.js133304493459603487 0
 117C:\Users\matte\Desktop\forkify\node_modules\@parcel\optimizer-htmlnano\node_modules\svgo\plugins\removeXMLProcInst.js133304493459673297 0
 110C:\Users\matte\Desktop\forkify\node_modules\@parcel\optimizer-htmlnano\node_modules\svgo\plugins\reusePaths.js133304493459723168 0
-58C:\Users\matte\Desktop\forkify\dist\index.f7626f62.css.map133304494206356330 0
+58C:\Users\matte\Desktop\forkify\dist\index.f7626f62.css.map133304653961526110 0
 109C:\Users\matte\Desktop\forkify\node_modules\@parcel\optimizer-htmlnano\node_modules\svgo\plugins\sortAttrs.js133304493459753087 0
 59C:\Users\matte\Desktop\forkify\node_modules\.bin\mkdirp.cmd133304492154428254 0
 112C:\Users\matte\Desktop\forkify\node_modules\@parcel\optimizer-htmlnano\node_modules\svgo\plugins\_collections.js133304493447206539 0
@@ -6114,7 +6115,10 @@
 54C:\Users\matte\Desktop\forkify\node_modules\.bin\which133304492154458178 0
 58C:\Users\matte\Desktop\forkify\node_modules\.bin\which.cmd133304492154458178 0
 58C:\Users\matte\Desktop\forkify\node_modules\.bin\which.ps1133304492154458178 0
-54C:\Users\matte\Desktop\forkify\dist\icons.21bad73c.svg133304494206525870 0
-57C:\Users\matte\Desktop\forkify\dist\index.62406edb.js.map133304494206386251 0
-54C:\Users\matte\Desktop\forkify\dist\index.f7626f62.css133304494206276550 0
-46C:\Users\matte\Desktop\forkify\dist\index.html133304494206525870 0
+54C:\Users\matte\Desktop\forkify\dist\icons.21bad73c.svg133304653961705624 0
+54C:\Users\matte\Desktop\forkify\dist\icons.dfd7a6db.svg133304653961705624 0
+57C:\Users\matte\Desktop\forkify\dist\index.62406edb.js.map133304497472750680 0
+53C:\Users\matte\Desktop\forkify\dist\index.e37f48ea.js133304669153443118 0
+57C:\Users\matte\Desktop\forkify\dist\index.e37f48ea.js.map133304669153473045 0
+54C:\Users\matte\Desktop\forkify\dist\index.f7626f62.css133304653961476230 0
+46C:\Users\matte\Desktop\forkify\dist\index.html133304653961655747 0
