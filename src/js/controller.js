@@ -31,11 +31,15 @@ const renderSpinner = function (parentEL) {
 
 const showRecipe = async function () {
   try {
+    // obtain the recipe's id
+    const id = window.location.hash.slice(1);
+
+    if (!id) return; // guard clause, if there's not an id return.
+
     // 1. Loading Recipe
     renderSpinner(recipeContainer);
     const res = await fetch(
-      'https://forkify-api.herokuapp.com/api/v2/recipes/5ed6604591c37cdc054bcd09'
-      // 'https://forkify-api.herokuapp.com/api/v2/recipes/5ed6604591c37cdc054bc886'
+      `https://forkify-api.herokuapp.com/api/v2/recipes/${id}`
     );
     const data = await res.json();
     console.log(res, data);
@@ -177,4 +181,8 @@ const showRecipe = async function () {
   }
 };
 
-showRecipe();
+/* When I have to asign the same function to different event listeners
+ I can put the events in an array and use forEach */
+
+// It launches showRecipe() on the page load and every time the hash changes
+['hashchange', 'load'].forEach(ev => window.addEventListener(ev, showRecipe));

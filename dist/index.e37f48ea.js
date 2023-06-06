@@ -603,9 +603,12 @@ const renderSpinner = function(parentEL) {
 };
 const showRecipe = async function() {
     try {
+        // obtain the recipe's id
+        const id = window.location.hash.slice(1);
+        if (!id) return; // guard clause, if there's not an id return.
         // 1. Loading Recipe
         renderSpinner(recipeContainer);
-        const res = await fetch("https://forkify-api.herokuapp.com/api/v2/recipes/5ed6604591c37cdc054bcd09");
+        const res = await fetch(`https://forkify-api.herokuapp.com/api/v2/recipes/${id}`);
         const data = await res.json();
         console.log(res, data);
         //re-format data object
@@ -731,7 +734,12 @@ const showRecipe = async function() {
         alert(err);
     }
 };
-showRecipe();
+/* When I have to asign the same function to different event listeners
+ I can put the events in an array and use forEach */ // It launches showRecipe() on the page load and every time the hash changes
+[
+    "hashchange",
+    "load"
+].forEach((ev)=>window.addEventListener(ev, showRecipe));
 
 },{"url:../img/icons.svg":"loVOp","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","core-js/modules/web.immediate.js":"49tUX","regenerator-runtime/runtime":"dXNgZ"}],"loVOp":[function(require,module,exports) {
 module.exports = require("9bcc84ee5d265e38").getBundleURL("hWUTQ") + "icons.dfd7a6db.svg" + "?" + Date.now();
