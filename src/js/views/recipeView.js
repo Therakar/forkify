@@ -35,6 +35,16 @@ class RecipeView {
     this.#parentElement.insertAdjacentHTML('afterbegin', markup);
   };
 
+  addHandlerRender(handler) {
+    /* 
+    When I have to asign the same function to different event listeners
+    I can put the events in an array and use forEach 
+    */
+
+    // It launches the handler on the page load and every time the hash changes
+    ['hashchange', 'load'].forEach(ev => window.addEventListener(ev, handler));
+  }
+
   #generateMarkup() {
     return `
         <figure class="recipe__fig">

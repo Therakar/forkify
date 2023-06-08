@@ -31,10 +31,8 @@ const controlRecipes = async function () {
   }
 };
 
-/* When I have to asign the same function to different event listeners
- I can put the events in an array and use forEach */
-
-// It launches controlRecipes() on the page load and every time the hash changes
-['hashchange', 'load'].forEach(ev =>
-  window.addEventListener(ev, controlRecipes)
-);
+//handling of the event
+const init = function () {
+  recipeView.addHandlerRender(controlRecipes);
+};
+init();

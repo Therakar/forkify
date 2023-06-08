@@ -598,12 +598,11 @@ const controlRecipes = async function() {
         alert(err);
     }
 };
-/* When I have to asign the same function to different event listeners
- I can put the events in an array and use forEach */ // It launches controlRecipes() on the page load and every time the hash changes
-[
-    "hashchange",
-    "load"
-].forEach((ev)=>window.addEventListener(ev, controlRecipes));
+//handling of the event
+const init = function() {
+    (0, _recipeViewJsDefault.default).addHandlerRender(controlRecipes);
+};
+init();
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","core-js/modules/web.immediate.js":"49tUX","regenerator-runtime/runtime":"dXNgZ","./model.js":"Y4A21","./views/recipeView.js":"l60JC"}],"gkKU3":[function(require,module,exports) {
 exports.interopDefault = function(a) {
@@ -2646,6 +2645,16 @@ class RecipeView {
         this.#parentElement.innerHTML = "";
         this.#parentElement.insertAdjacentHTML("afterbegin", markup);
     };
+    addHandlerRender(handler) {
+        /* 
+    When I have to asign the same function to different event listeners
+    I can put the events in an array and use forEach 
+    */ // It launches the handler on the page load and every time the hash changes
+        [
+            "hashchange",
+            "load"
+        ].forEach((ev)=>window.addEventListener(ev, handler));
+    }
     #generateMarkup() {
         return `
         <figure class="recipe__fig">
