@@ -595,7 +595,7 @@ const controlRecipes = async function() {
         (0, _recipeViewJsDefault.default).render(_modelJs.state.recipe);
     //recipe's markup
     } catch (err) {
-        alert(err);
+        (0, _recipeViewJsDefault.default).renderError();
     }
 };
 //handling of the event
@@ -2565,6 +2565,7 @@ const loadRecipe = async function(id) {
     } catch (err) {
         //Temporary error handling
         console.error(`${err} ⚠⚠⚠⚠⚠`);
+        throw err;
     }
 };
 
@@ -2611,7 +2612,7 @@ const getJSON = async function(url) {
     }
 };
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","regenerator-runtime":"dXNgZ","./config":"k5Hzs"}],"l60JC":[function(require,module,exports) {
+},{"regenerator-runtime":"dXNgZ","./config":"k5Hzs","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"l60JC":[function(require,module,exports) {
 /*
 The view is gonna be a class because later I will have a parent class called 'view'
 which will conatin a couple of methods that all the views should inherit, also I want each view to have 
@@ -2624,16 +2625,17 @@ var _fractional = require("fractional");
 class RecipeView {
     #parentElement = document.querySelector(".recipe");
     #data;
+    #errorMessage = `We couldn't find that recipe. Please try another one!`;
     render(data) {
         this.#data = data;
         const markup = this.#generateMarkup();
-        this.#clear;
+        this.#clear();
         this.#parentElement.insertAdjacentHTML("afterbegin", markup);
     }
     #clear() {
         this.#parentElement.innerHTML = "";
     }
-    renderSpinner = function() {
+    renderSpinner() {
         const markup = `
       <div class="spinner">
         <svg>
@@ -2642,9 +2644,23 @@ class RecipeView {
       </div> 
   
     `;
-        this.#parentElement.innerHTML = "";
+        this.#clear();
         this.#parentElement.insertAdjacentHTML("afterbegin", markup);
-    };
+    }
+    renderError(message = this.#errorMessage) {
+        const markup = `
+      <div class="error">
+        <div>
+          <svg>
+            <use href="${(0, _iconsSvgDefault.default)}#icon-alert-triangle"></use>
+          </svg>
+        </div>
+        <p>${message}</p>
+      </div>
+    `;
+        this.#clear();
+        this.#parentElement.insertAdjacentHTML("afterbegin", markup);
+    }
     addHandlerRender(handler) {
         /* 
     When I have to asign the same function to different event listeners
