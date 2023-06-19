@@ -598,6 +598,8 @@ const controlRecipes = async function() {
         const id = window.location.hash.slice(1);
         if (!id) return; // guard clause, if there's not an id return.
         (0, _recipeViewJsDefault.default).renderSpinner();
+        // 0. Update results view to mark selected search result
+        (0, _resultsViewJsDefault.default).update(_modelJs.getSearchResultsPage());
         // 1. Loading Recipe
         await _modelJs.loadRecipe(id);
         // 2. Rendering Recipe
@@ -633,7 +635,8 @@ const controlServings = function(newServings) {
     //Update the recipe servings (in state)
     _modelJs.updateServings(newServings);
     //Update the recipe view
-    (0, _recipeViewJsDefault.default).render(_modelJs.state.recipe);
+    // recipeView.render(model.state.recipe);
+    (0, _recipeViewJsDefault.default).update(_modelJs.state.recipe); //using update instead of render because update will only update text and attribute in the DOM without rendering the entire view
 };
 //handling of the event
 const init = function() {
@@ -2850,6 +2853,32 @@ class View {
         this._clear();
         this._parentElement.insertAdjacentHTML("afterbegin", markup);
     }
+    update(data) {
+        this._data = data;
+        const newMarkup = this._generateMarkup(); //this is a string, so it's very dificult to compare to the DOM element that I currently have on the page
+        /*
+    I can convert the markup string to a DOM object that's living in
+    the memory and that I can then use to compare with the actual DOM
+    that's on the page 
+    */ //Conversion
+        const newDOM = document.createRange().createContextualFragment(newMarkup);
+        const newElements = Array.from(newDOM.querySelectorAll("*"));
+        const curElements = Array.from(this._parentElement.querySelectorAll("*"));
+        console.log(curElements);
+        console.log(newElements);
+        //Updates changed TEXT
+        newElements.forEach((newEl, i)=>{
+            const curEl = curElements[i];
+            console.log(curEl, newEl.isEqualNode(curEl));
+            if (!newEl.isEqualNode(curEl) && newEl.firstChild?.nodeValue.trim() !== "") {
+                console.log("\uD83D\uDCA5", newEl.firstChild.nodeValue.trim());
+                curEl.textContent = newEl.textContent;
+            }
+            //Update changed ATTRIBUTES
+            if (!newEl.isEqualNode(curEl)) //Here I'm replacing all the attributes in curEl with attributes coming from newEl
+            Array.from(newEl.attributes).forEach((attr)=>curEl.setAttribute(attr.name, attr.value));
+        });
+    }
     _clear() {
         this._parentElement.innerHTML = "";
     }
@@ -3202,9 +3231,10 @@ class ResultsView extends (0, _viewDefault.default) {
         return this._data.map(this._generateMarkupPreview).join("");
     }
     _generateMarkupPreview(result) {
+        const id = window.location.hash.slice(1);
         return `
       <li class="preview">
-        <a class="preview__link" href="#${result.id}">
+        <a class="preview__link ${result.id === id ? "preview__link--active" : ""}" href="#${result.id}">
           <figure class="preview__fig">
             <img src="${result.image}" alt="Test" />
           </figure>

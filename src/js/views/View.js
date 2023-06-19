@@ -16,6 +16,44 @@ export default class View {
     this._parentElement.insertAdjacentHTML('afterbegin', markup);
   }
 
+  update(data) {
+    this._data = data;
+    const newMarkup = this._generateMarkup(); //this is a string, so it's very dificult to compare to the DOM element that I currently have on the page
+
+    /*
+    I can convert the markup string to a DOM object that's living in
+    the memory and that I can then use to compare with the actual DOM
+    that's on the page 
+    */
+
+    //Conversion
+    const newDOM = document.createRange().createContextualFragment(newMarkup);
+    const newElements = Array.from(newDOM.querySelectorAll('*'));
+    const curElements = Array.from(this._parentElement.querySelectorAll('*'));
+    console.log(curElements);
+    console.log(newElements);
+
+    //Updates changed TEXT
+    newElements.forEach((newEl, i) => {
+      const curEl = curElements[i];
+      console.log(curEl, newEl.isEqualNode(curEl));
+
+      if (
+        !newEl.isEqualNode(curEl) &&
+        newEl.firstChild?.nodeValue.trim() !== ''
+      ) {
+        console.log('💥', newEl.firstChild.nodeValue.trim());
+        curEl.textContent = newEl.textContent;
+      }
+      //Update changed ATTRIBUTES
+      if (!newEl.isEqualNode(curEl))
+        //Here I'm replacing all the attributes in curEl with attributes coming from newEl
+        Array.from(newEl.attributes).forEach(attr =>
+          curEl.setAttribute(attr.name, attr.value)
+        );
+    });
+  }
+
   _clear() {
     this._parentElement.innerHTML = '';
   }
