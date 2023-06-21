@@ -77,10 +77,21 @@ const controlServings = function (newServings) {
   recipeView.update(model.state.recipe); //using update instead of render because update will only update text and attribute in the DOM without rendering the entire view
 };
 
+const controlAddBookmark = function () {
+  if (!model.state.recipe.bookmarked) {
+    model.addBookmark(model.state.recipe);
+  } else {
+    model.deleteBookmark(model.state.recipe.id);
+  }
+  // console.log(model.state.recipe);
+  recipeView.update(model.state.recipe);
+};
+
 //handling of the event
 const init = function () {
   recipeView.addHandlerRender(controlRecipes);
   recipeView.addHandlerUpdateServings(controlServings);
+  recipeView.addHandlerAddBookmark(controlAddBookmark);
   searchView.addHandlerSearch(controlSearchResults);
   paginationView.addHandlerClick(controlPagination);
 };
