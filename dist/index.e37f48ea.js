@@ -2061,7 +2061,9 @@ const loadSearchResults = async function(query) {
                 image: rec.image_url
             };
         });
-    // console.log(state.search.results);
+        // console.log(state.search.results);
+        //reset page to 1
+        state.search.page = 1;
     } catch (err) {
         console.error(`${err} ⚠⚠⚠⚠⚠`);
         throw err;

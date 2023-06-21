@@ -55,6 +55,9 @@ export const loadSearchResults = async function (query) {
       };
     });
     // console.log(state.search.results);
+
+    //reset page to 1
+    state.search.page = 1;
   } catch (err) {
     console.error(`${err} ⚠⚠⚠⚠⚠`);
     throw err;
