@@ -1,13 +1,16 @@
 import { API_URL } from './config.js';
 import * as model from './model.js';
+
 import recipeView from './views/recipeView.js';
 import resultsView from './views/resultsView.js';
 import paginationView from './views/paginationView.js';
 import bookmarksView from './views/bookmarksView.js';
+import addRecipeView from './views/addRecipeView.js';
 
 import 'core-js/stable';
 import 'regenerator-runtime/runtime';
 import searchView from './views/searchView.js';
+import { async } from 'regenerator-runtime';
 
 // if (module.hot) {
 //   module.hot.accept();
@@ -17,6 +20,7 @@ import searchView from './views/searchView.js';
 
 ///////////////////////////////////////
 
+//RECIPES
 const controlRecipes = async function () {
   try {
     // obtain the recipe's id
@@ -43,6 +47,7 @@ const controlRecipes = async function () {
   }
 };
 
+//SERACH RESULTS
 const controlSearchResults = async function () {
   try {
     //renders spinner on resultsView
@@ -65,6 +70,7 @@ const controlSearchResults = async function () {
   }
 };
 
+//PAGINATION
 const controlPagination = function (goToPage) {
   // 3. Render new results
   resultsView.render(model.getSearchResultsPage(goToPage));
@@ -73,6 +79,7 @@ const controlPagination = function (goToPage) {
   paginationView.render(model.state.search);
 };
 
+//SERVINGS
 const controlServings = function (newServings) {
   //Update the recipe servings (in state)
   model.updateServings(newServings);
@@ -82,6 +89,7 @@ const controlServings = function (newServings) {
   recipeView.update(model.state.recipe); //using update instead of render because update will only update text and attribute in the DOM without rendering the entire view
 };
 
+//BOOKMARKS
 const controlAddBookmark = function () {
   // 1. Add/remove bookamrk
   if (!model.state.recipe.bookmarked) {
@@ -100,6 +108,17 @@ const controlBookmark = function () {
   bookmarksView.render(model.state.bookmarks);
 };
 
+//RECIPE UPLOAD
+const controlAddRecipe = async function (newRecipe) {
+  try {
+    //Upload the new recipe data
+    await model.uploadRecipe(newRecipe);
+  } catch (err) {
+    console.error('💥💥💥💥', err);
+    addRecipeView.renderError(err.message);
+  }
+};
+
 //handling of the event
 const init = function () {
   bookmarksView.addHandlerRender(controlBookmark);
@@ -108,5 +127,7 @@ const init = function () {
   recipeView.addHandlerAddBookmark(controlAddBookmark);
   searchView.addHandlerSearch(controlSearchResults);
   paginationView.addHandlerClick(controlPagination);
+  addRecipeView.addHandlerUpload(controlAddRecipe);
 };
+
 init();

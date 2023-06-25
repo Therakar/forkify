@@ -12,3 +12,6 @@ export const TIMEOUT_SEC = 10;
 
 //Results per page
 export const RES_PER_PAGE = 10;
+
+//API Key
+export const API_KEY = '79feebbe-d2fe-4d38-a72e-3665097458b9';
