@@ -1,4 +1,4 @@
-import { API_URL } from './config.js';
+import { MODAL_CLOSE_SEC } from './config.js';
 import * as model from './model.js';
 
 import recipeView from './views/recipeView.js';
@@ -111,8 +111,29 @@ const controlBookmark = function () {
 //RECIPE UPLOAD
 const controlAddRecipe = async function (newRecipe) {
   try {
+    //Show loading spinner
+    addRecipeView.renderSpinner();
+
     //Upload the new recipe data
     await model.uploadRecipe(newRecipe);
+    console.log(model.state.recipe);
+
+    //Render recipe
+    recipeView.render(model.state.recipe);
+
+    //Success message
+    addRecipeView.renderMessage();
+
+    // Render bookmark view
+    bookmarksView.render(model.state.bookmarks);
+
+    //Change IDin URL
+    window.history.pushState(null, '', `#${model.state.recipe.id}`);
+
+    //close form Window
+    setTimeout(function () {
+      addRecipeView.toggleWindow();
+    }, MODAL_CLOSE_SEC * 1000);
   } catch (err) {
     console.error('💥💥💥💥', err);
     addRecipeView.renderError(err.message);
