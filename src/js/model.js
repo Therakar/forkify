@@ -143,6 +143,7 @@ const clearBookmarks = function () {
   localStorage.clear('bookmarks');
 };
 
+// UPLOAD RECIPE
 export const uploadRecipe = async function (newRecipe) {
   try {
     const ingredients = Object.entries(newRecipe)
@@ -154,8 +155,8 @@ export const uploadRecipe = async function (newRecipe) {
           throw new Error(
             'Wrong ingredient format! Please use the correct fromat!'
           );
-        const [quantity, unity, description] = ingArray;
-        return { quantity: quantity ? +quantity : null, unity, description };
+        const [quantity, unit, description] = ingArray;
+        return { quantity: quantity ? +quantity : null, unit, description };
       });
 
     const recipe = {

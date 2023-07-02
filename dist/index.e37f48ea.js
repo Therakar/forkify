@@ -2193,10 +2193,10 @@ const uploadRecipe = async function(newRecipe) {
             const ingArray = ing[1].split(",").map((el)=>el.trim());
             // const ingArray = ing[1].replaceAll(' ', '').split(',');
             if (ingArray.length !== 3) throw new Error("Wrong ingredient format! Please use the correct fromat!");
-            const [quantity, unity, description] = ingArray;
+            const [quantity, unit, description] = ingArray;
             return {
                 quantity: quantity ? +quantity : null,
-                unity,
+                unit,
                 description
             };
         });
